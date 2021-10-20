@@ -1,7 +1,8 @@
 function getPropertyFromPrototype(propertyName, object) {
-  if (propertyName in object.__proto__) {
+  if (propertyName in object) {
     return object.__proto__[propertyName];
   }
+
   return undefined;
 }
 

@@ -8,6 +8,7 @@ function toCamelCase(string) {
     if (!word) return word;
     return word[0].toUpperCase() + word.toLowerCase().slice(1);
   }).join('');
+
   return firstLetterToLowerCase(tempString);
 }
 
