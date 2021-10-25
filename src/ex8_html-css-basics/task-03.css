@@ -1,0 +1,17 @@
+#framed-div-1 {
+    margin: 5px;
+    outline: 2px solid #000;
+}
+
+#framed-div-2 {
+    margin: 5px;
+    border: 2px solid #000;
+}
+
+#framed-div-3 {
+    margin: 5px;
+    border-top: 3px dotted rgb(230, 39, 39);
+    border-left: 5px double rgb(42, 134, 31);
+    border-right: 4px dashed rgb(209, 31, 244);
+    border-bottom: 2px solid #000;
+}
