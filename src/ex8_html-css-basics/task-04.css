@@ -1,23 +1,23 @@
-#description-list {
+.description-list {
     margin-left: 0;
     padding-left: 0;
 }
 
-#description-list ul li {
+.description-list ul li {
     list-style-type: none;
 }
 
-#description-list li {
+.description-list li {
     list-style-type: none;
 }
 
-#colored-div {
+.colored-div {
     background-color: green;
     width: 400mm;
     font-family: "Palatino Linotype";
 }
 
-#ordered-list-div {
+.ordered-list-div {
     background-color: rgb(185, 140, 140);
     height: 30rem;
     width: 30vw;
@@ -25,14 +25,14 @@
     font-size: 28px;
 }
 
-#unordered-list-div {
+.unordered-list-div {
     background-color: #3f4f33;
     width: 2.5in;
     height: 300pt;
     font-family: "Georgia";
 }
 
-#paragraphs-div {
+.paragraphs-div {
     background-image: url(https://st4.depositphotos.com/15827116/19629/i/600/depositphotos_196295648-stock-photo-close-up-view-of-brown.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -40,12 +40,12 @@
     font-family: "Lucida Console";
 }
 
-#tables-div {
+.tables-div {
     background-color: #d6b5d2;
     height: 15em;
 }
 
-#pre-tag-div pre {
+.pre-tag-div pre {
     font-family: "RalewayRegular";
     font-size: 30px;
 }
