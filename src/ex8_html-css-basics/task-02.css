@@ -1,0 +1,16 @@
+#description-list {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#description-list ul li {
+    list-style-type: none;
+}
+
+#description-list li {
+    list-style-type: none;
+}
+
+#colored-div {
+    background-color: green;
+}
