@@ -1,0 +1,17 @@
+.customersTable tr:nth-child(odd) {
+    background-color: #e4ecf5;
+}
+
+.customersTable tr:nth-child(even) {
+    background-color: #f4f8ff;
+}
+
+.customersTable th, .customersTable td {
+    color: #747e99;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+}
+
+.customersTable tr:hover {
+    background-color: #dfe3e7;
+}

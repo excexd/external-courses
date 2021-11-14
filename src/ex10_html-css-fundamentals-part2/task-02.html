@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="http://httpbin.org/get" method="GET">
+      <fieldset>
+        <legend>Personal data</legend>
+        <p>
+          <label for="surname">Surname</label>
+          <input type="text" id="surname" />
+        </p>
+        <p>
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" />
+        </p>
+        <p>
+          <label for="middleName">Middle Name</label>
+          <input type="text" id="middleName" />
+        </p>
+        <p>
+          <label>You are</label>
+          <input type="radio" name="gender" id="radioMale" value="male" />
+          <label for="radioMale">male</label>
+          <input type="radio" name="gender" id="radioFemale" value="female" />
+          <label for="radioFemale">female</label>
+        </p>
+        <p>
+          <label for="age">Age</label>
+          <input type="number" id="age" min="18" max="101" />
+        </p>
+        <p>
+          <label for="country">Country of Residence</label>
+          <select id="country">
+            <option></option>
+          </select>
+        </p>
+        <p>
+          <label>City</label>
+          <label>
+            <input type="checkbox" name="optionRyazan" value="1" />Ryazan
+          </label>
+          <label>
+            <input type="checkbox" name="optionMoscow" value="2" />Moscow
+          </label>
+        </p>
+        <p>
+          <label for="photo">Photography</label>
+          <input type="file" id="photo" />
+        </p>
+        <hr />
+        <p>
+          <label for="profession">Title</label>
+          <select id="profession" multiple>
+            <optgroup label="Technologies">
+              <option value="1">Web Master</option>
+              <option value="2">Database Administrator</option>
+              <option value="3">Computer-aided design</option>
+            </optgroup>
+            <optgroup label="Finance">
+              <option value="4">Economic Planning</option>
+              <option value="5">Management accounting</option>
+              <option value="6">Budgeting and planning</option>
+            </optgroup>
+          </select>
+        </p>
+        <p>
+          <label for="salary">Salary</label>
+          <input type="range" />
+        </p>
+        <p>
+          <textarea
+            name="textInfo"
+            id="textInfo"
+            cols="50"
+            rows="10"
+            placeholder="Tell us about yourself..."
+          ></textarea>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Contact Information</legend>
+        <p>
+          <label for="site">Site</label>
+          <input type="url" id="site" />
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </p>
+        <p>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" />
+        </p>
+      </fieldset>
+      <p>
+        <label for="password">Password</label>
+        <input type="password" required id="password" />
+      </p>
+      <p>
+        <input type="submit" />
+        <input type="reset" />
+      </p>
+    </form>
+  </body>
+</html>
