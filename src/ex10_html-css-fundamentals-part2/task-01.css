@@ -1,0 +1,72 @@
+.img-round {
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 320px;
+}
+
+.img-round img {
+    width: 320px;
+    height: 320px;
+    background: red;
+    border-radius: 160px;
+}
+
+.img-shape, .img-shape div {
+    margin: 0 auto;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+}
+
+.img-shape {
+    transform: rotate(45deg);
+}
+
+.img-shape .shape1 {
+    width: 355px;
+    height: 355px;
+    transform: rotate(-45deg) translateY(-15px);
+}
+
+.img-shape .shape2 {
+    width: 400px;
+    height: 260px;
+    transform: translateX(-25px);
+}
+
+.img-shape .shape1 img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans Condensed", "Open Sans", "Droid Sans", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.7;
+    background: #208C8C;
+    color: #DFF7E5;
+}
+
+h1, h2 {
+    font-weight: normal;
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 0.5em;
+}
+
+.part {
+    padding: 50px 20px 85px;
+    background: #205B73;
+    color: #AFE4FC;
+}
+
+.part:nth-of-type(2n) {
+    background: #F2E6A7;
+    color: #CDAE51
+}
