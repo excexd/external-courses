@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 150px;
+
+}
+
+.slider {
+    height: 500px;
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.slider-control {
+    background: linear-gradient(#7e7e7e, #e2e2e2);
+    border-radius: 50%;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font: bold 30px "Fira Sans", sans-serif;
+}
+
+.slider-control:hover {
+    cursor: pointer;
+    background: linear-gradient(#616161, #c4c4c4);
+    outline: 2px solid rgba(104, 104, 104, 0.6);
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    animation: image-appearance 1s ease;
+    border-radius: 5%;
+}
+
+@keyframes image-appearance {
+    0% {
+        border-radius: 15%;
+    }
+}
