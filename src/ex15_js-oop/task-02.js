@@ -1,8 +1,9 @@
+/* eslint-disable func-names */
 class ElectricalAppliance {
   constructor(name, power) {
     this.name = name;
     this.power = power;
-    this.switchedOn = false;
+    this.isSwitchedOn = false;
   }
 
   switchOn() {
@@ -35,31 +36,40 @@ class Television extends ElectricalAppliance {
   }
 }
 
-function calcPowerConsumption(array) {
+ElectricalAppliance.calcPowerConsumption = function (array) {
   let powerConsumption = 0;
-  array.forEach((element) => {
-    powerConsumption += element.power;
-  });
-  return powerConsumption;
-}
 
-function searchByName(array, searchName) {
+  array.forEach((element) => {
+    console.log(element.isSwitchedOn);
+    if (element.isSwitchedOn) {
+      powerConsumption += element.power;
+    }
+  });
+
+  return powerConsumption;
+};
+
+ElectricalAppliance.searchByName = function (array, searchName) {
   const searchResult = [];
+
   array.forEach((element) => {
     if (element.name.toLowerCase().indexOf(searchName.toLowerCase()) !== -1) {
       searchResult.push(element);
     }
   });
-  return searchResult;
-}
 
-function getNamesOfElements(array) {
+  return searchResult;
+};
+
+ElectricalAppliance.getNamesOfElements = function (array) {
   const names = [];
+
   array.forEach((element) => {
     names.push(element.name);
   });
+
   return names;
-}
+};
 
 const fan = new Fan('Centek 3150', 30, 35);
 const lamp = new Lamp('Camelion KD-313', 60, 'Настольный светильник');
@@ -69,11 +79,12 @@ lamp.switchOn();
 television.switchOn();
 
 const roomElectricalAppliances = [fan, lamp, television];
+const powerConsumption = ElectricalAppliance.calcPowerConsumption(roomElectricalAppliances);
 
-const powerConsumption = calcPowerConsumption(roomElectricalAppliances);
 console.log(`Потребляемая мощность: ${powerConsumption} Ватт`);
 
 const searchRequest = '31';
-const searchResult = searchByName(roomElectricalAppliances, searchRequest);
+const searchResult = ElectricalAppliance.searchByName(roomElectricalAppliances, searchRequest);
+
 console.log(`Поиск электроприборов по запросу ${searchRequest}`);
-console.log(getNamesOfElements(searchResult));
+console.log(ElectricalAppliance.getNamesOfElements(searchResult));

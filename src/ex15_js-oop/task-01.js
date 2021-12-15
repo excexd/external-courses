@@ -30,47 +30,54 @@ const kitKatDark = new ChocolateBar('Nestle', 'KitKat Dark Chocolate', 0.17, ['w
 const skittlesFruits = new Candy('Mars', 'Skittles Fruits', 0.038, ['dragee']);
 const fruittella = new Candy('Perfetti Van Melle', 'Fruittella', 0.041, ['fruit juice']);
 const mentos = new Candy('Perfetti Van Melle', 'Mentos', 0.038, ['dragee']);
-
 const newYearGift = [snickers, nuts, bounty, picnic,
   kitKatDark, skittlesFruits, fruittella, mentos];
 
-function calcWeight(array) {
+Sweet.calcWeight = function (array) {
   let weight = 0;
+
   array.forEach((element) => {
     weight += element.weight;
   });
 
   return weight;
-}
+};
 
-function compareSweets(parameter) {
+Sweet.compareSweets = function (parameter) {
   return (a, b) => (a[parameter] > b[parameter] ? 1 : -1);
-}
+};
 
-function searchByName(array, searchName) {
+Sweet.searchByName = function (array, searchName) {
   const searchResult = [];
+
   array.forEach((element) => {
     if (element.name.toLowerCase().indexOf(searchName.toLowerCase()) !== -1) {
       searchResult.push(element);
     }
   });
-  return searchResult;
-}
 
-function getNamesOfElements(array) {
+  return searchResult;
+};
+
+Sweet.getNamesOfElements = function (array) {
   const names = [];
+
   array.forEach((element) => {
     names.push(element.name);
   });
-  return names;
-}
 
-console.log(`Собранный новогодний подарок: ${getNamesOfElements(newYearGift)}`);
-console.log(`Вес подарка: ${calcWeight(newYearGift)}`);
+  return names;
+};
+
+console.log(`Собранный новогодний подарок: ${Sweet.getNamesOfElements(newYearGift)}`);
+console.log(`Вес подарка: ${Sweet.calcWeight(newYearGift)}`);
 console.log('Новогодний подарок, отсортированный по названию:');
-const sortedArray = newYearGift.sort(compareSweets('name'));
-console.log(getNamesOfElements(sortedArray));
+const sortedArray = newYearGift.sort(Sweet.compareSweets('name'));
+
+console.log(Sweet.getNamesOfElements(sortedArray));
+
 const searchRequest = 'it';
-const searchResult = searchByName(newYearGift, searchRequest);
+const searchResult = Sweet.searchByName(newYearGift, searchRequest);
+
 console.log(`Поиск подарков по запросу ${searchRequest}`);
-console.log(getNamesOfElements(searchResult));
+console.log(Sweet.getNamesOfElements(searchResult));
